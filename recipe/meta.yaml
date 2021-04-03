@@ -1,5 +1,5 @@
 {% set name = "sklearn-genetic" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sklearn-genetic-{{ version }}.tar.gz
-  sha256: 9b183e86ccf5a13690ca1a54070eb0e73e33040659a1cc076a56e7bb08f7549c
+  sha256: 81b44319498656ca50e14fc300cccf2f1434a35ddaf950b86c7d16e03fe0d8d2
 
 build:
   number: 0
