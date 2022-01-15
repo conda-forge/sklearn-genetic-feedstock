@@ -1,5 +1,5 @@
 {% set name = "sklearn-genetic" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sklearn-genetic-{{ version }}.tar.gz
-  sha256: fb672775b73cbebd060a4d925197563b7439b6b7cdd7e72c22c50569be405659
+  sha256: 864981a46afccc7bc3d5677d68282c05cc128b16b93082494960e9ea3bad6f20
 
 build:
   number: 0
@@ -18,11 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=2.7
+    - python >=3.6
   run:
     - deap >=1.0.2
-    - python >=2.7
-    - scikit-learn >=0.20.3
+    - multiprocess
+    - numpy
+    - python >=3.6
+    - scikit-learn >=0.23
 
 test:
   imports:
