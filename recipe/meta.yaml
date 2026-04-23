@@ -7,26 +7,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sklearn-genetic-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sklearn-genetic-{{ version }}.tar.gz
   sha256: d5b5623e59feb6722cf5bb03b914dc93b8d93b3dff9103e5b9825241281b5338
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - deap >=1.0.2
     - multiprocess
     - numpy
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-learn >=1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - genetic_selection
 
